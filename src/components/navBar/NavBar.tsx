@@ -1,21 +1,21 @@
-import { Link as ScrollLink } from 'react-scroll';
 import { cn } from '../../utils/cn';
+import { sectionsData, siteOffset } from '../../utils/sectionsData';
 import DrawerMenu from '../Drawer';
+import ScrollLink from '../ScrollLink';
 import useApplyLinkStyle from './hooks/useApplyLinkStyle';
 import useApplyNavBarStyle from './hooks/useApplyNavBarStyle';
 
-const sectionsOffset = 120;
-
+const { home, aboutUs, whatWeAreDoing, getInTouch } = sectionsData;
 const sections = [
-  { nameToDisplay: 'Home', sectionName: 'home' },
-  { nameToDisplay: 'About us', sectionName: 'about' },
-  { nameToDisplay: 'Services', sectionName: 'what-we-do' },
-  { nameToDisplay: 'Get in touch', sectionName: 'contact' },
+  { nameToDisplay: 'Home', sectionName: home },
+  { nameToDisplay: 'About us', sectionName: aboutUs },
+  { nameToDisplay: 'Services', sectionName: whatWeAreDoing },
+  { nameToDisplay: 'Get in touch', sectionName: getInTouch },
 ];
 
 function NavBar() {
   const [navBarStyle] = useApplyNavBarStyle();
-  const [activeSection] = useApplyLinkStyle({ offset: sectionsOffset });
+  const [activeSection] = useApplyLinkStyle({ offset: siteOffset });
 
   return (
     <nav
@@ -31,12 +31,9 @@ function NavBar() {
             <li key={sectionName}>
               <ScrollLink
                 to={sectionName}
-                smooth={true}
-                duration={0}
-                offset={-sectionsOffset}
                 className={cn(
-                  'cursor-pointer font-semibold text-black hover:text-third',
-                  isLinkSectionActive ? 'text-third' : ''
+                  'cursor-pointer font-semibold text-black hover:text-main',
+                  isLinkSectionActive ? 'text-main' : ''
                 )}
               >
                 {nameToDisplay}

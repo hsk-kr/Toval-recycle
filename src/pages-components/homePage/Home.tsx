@@ -1,6 +1,8 @@
 import React from 'react';
 import Button from '../../components/Button';
 import { PiRecycleLight, PiPercent } from 'react-icons/pi';
+import { sectionsData, siteOffset } from '../../utils/sectionsData';
+import ScrollLink from '../../components/ScrollLink';
 
 const PARAGRAPH =
   'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse ullamcorper enim vel fringilla scelerisque. Morbi fermentum, metus eget aliquet laoreet, dolor arcu congue mauris';
@@ -37,9 +39,11 @@ function Home() {
             {PARAGRAPH}
           </p>
           <div className="flex justify-center lg:justify-start">
-            <Button className="px-4 py-2 text-sm lg:text-[1.3vw] xl:text-lg">
-              Get in touch
-            </Button>
+            <ScrollLink to={sectionsData.getInTouch}>
+              <Button className="px-4 py-2 text-sm lg:text-[1.3vw] xl:text-lg">
+                Get in touch
+              </Button>
+            </ScrollLink>
           </div>
         </div>
         <img
