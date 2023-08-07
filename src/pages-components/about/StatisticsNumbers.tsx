@@ -21,16 +21,18 @@ const statisticsNumbersData = [
 function StatisticsNumbers() {
   return (
     <div className="flex flex-wrap flex-col items-center gap-10 px-8 sm:flex-row w-full justify-around text-xl text-third">
-      {statisticsNumbersData.map(({ icon, number, title }) => (
-        <div className="relative w-52 md:w-auto">
+      {statisticsNumbersData.map(({ icon, number, title }, index) => (
+        <div className="relative w-52 md:w-auto" key={index}>
           <div className="absolute z-0 -translate-x-1/2 -translate-y-[30%] md:-translate-y-[20%] opacity-60">
             <div className="h-16 md:h-20">{icon}</div>
           </div>
           <div className="relative z-10 flex flex-col gap-2">
-            <h1 className="font-bold text-main text-4xl md:text-7xl">
+            <h1 className="font-bold text-main text-5xl md:text-7xl">
               {number}
             </h1>
-            <h1 className="text-sm md:text-base text-gray-700">{title}</h1>
+            <h1 className="text-sm md:text-base text-gray-700">
+              {title}
+            </h1>
           </div>
         </div>
       ))}

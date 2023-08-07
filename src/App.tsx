@@ -5,14 +5,14 @@ import { BrowserRouter as Router } from 'react-router-dom';
 import WhatWeDo from './pages-components/what-we-do/WhatWeDo';
 import Contact from './pages-components/contact-us/ContactUs';
 import Cards from './pages-components/about/AboutCards';
-import StatisticsNumbers from './pages-components/what-we-do/StatisticsNumbers';
+import StatisticsNumbers from './pages-components/about/StatisticsNumbers';
 import Clients from './pages-components/what-we-do/Clients';
 import Footer from './pages-components/footer/Footer';
 import OurProducts from './pages-components/product/OurProducts';
-import { sectionsData } from './utils/sectionsData';
+import { sectionsID } from './utils/projectData';
 
 function App() {
-  const { home, aboutUs, whatWeAreDoing, getInTouch } = sectionsData;
+  const { home, aboutUs, whatWeAreDoing, getInTouch } = sectionsID;
 
   return (
     <Router>

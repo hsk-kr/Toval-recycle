@@ -1,5 +1,5 @@
 import React, { ReactNode, forwardRef } from 'react';
-import { siteOffset } from '../utils/sectionsData';
+import { siteOffset } from '../utils/projectData';
 import { Link, LinkProps } from 'react-scroll';
 
 interface ScrollLinkProps extends LinkProps {

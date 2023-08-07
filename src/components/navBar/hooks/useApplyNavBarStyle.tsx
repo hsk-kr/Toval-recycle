@@ -4,6 +4,7 @@ const scrolledNavBarStyle = '';
 
 function useApplyNavBarStyle() {
   const [navbarStyle, setNavbarStyle] = useState('');
+
   useEffect(() => {
     const handleScroll = () => {
       if (window.scrollY > 0) {

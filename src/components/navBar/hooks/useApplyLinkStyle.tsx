@@ -1,18 +1,18 @@
 import React, { useEffect, useState } from 'react';
-import sectionsData from '../../../utils/sectionsData';
+import { sectionsID } from '../../../utils/projectData';
 
 interface useApplyLinkStyleProps {
   offset: number;
 }
 function useApplyLinkStyle({ offset }: useApplyLinkStyleProps) {
-  const [activeSection, setActiveSection] = useState(sectionsData.home);
+  const [activeSection, setActiveSection] = useState(sectionsID.home);
 
   // Function to handle scrolling and update the active section
   const handleScroll = () => {
     const scrollY = window.scrollY + offset;
     const viewportHeight = window.innerHeight;
 
-    for (const section of Object.values(sectionsData)) {
+    for (const section of Object.values(sectionsID)) {
       const sectionElement = document.getElementById(section);
       if (!sectionElement) continue;
 

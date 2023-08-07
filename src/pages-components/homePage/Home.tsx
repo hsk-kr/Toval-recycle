@@ -1,7 +1,7 @@
 import React from 'react';
 import Button from '../../components/Button';
 import { PiRecycleLight, PiPercent } from 'react-icons/pi';
-import { sectionsData, siteOffset } from '../../utils/sectionsData';
+import { sectionsID, siteOffset } from '../../utils/projectData';
 import ScrollLink from '../../components/ScrollLink';
 
 const PARAGRAPH =
@@ -39,7 +39,7 @@ function Home() {
             {PARAGRAPH}
           </p>
           <div className="flex justify-center lg:justify-start">
-            <ScrollLink to={sectionsData.getInTouch}>
+            <ScrollLink to={sectionsID.getInTouch}>
               <Button className="px-4 py-2 text-sm lg:text-[1.3vw] xl:text-lg">
                 Get in touch
               </Button>

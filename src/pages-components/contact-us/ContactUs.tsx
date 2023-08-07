@@ -126,8 +126,8 @@ function ContactUs() {
         <div className="flex flex-col gap-10">
           <img src="/contact-us-image.svg" />
           <div className="flex flex-col gap-4">
-            {contactInfo.map(({ icon, title }) => (
-              <div className="flex gap-5 items-center">
+            {contactInfo.map(({ icon, title }, index) => (
+              <div className="flex gap-5 items-center" key={index}>
                 <div className="border-[1px] rounded-full p-3 text-2xl text-main">
                   {icon}
                 </div>

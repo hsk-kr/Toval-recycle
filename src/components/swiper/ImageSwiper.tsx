@@ -48,8 +48,8 @@ export default function ImageSwiper({
         className={cn('image-swiper', className)}
         {...props}
       >
-        {data.map((src) => (
-          <SwiperSlide>
+        {data.map((src, index) => (
+          <SwiperSlide key={index}>
             <img src={src} />
           </SwiperSlide>
         ))}
