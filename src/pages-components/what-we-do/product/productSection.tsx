@@ -1,6 +1,6 @@
 import React from 'react';
-import ParagraphHeader from '../../components/ParagraphHeader';
-import { cn } from '../../utils/cn';
+import ParagraphHeader from '../../../components/ParagraphHeader';
+import { cn } from '../../../utils/cn';
 
 interface ProductSectionProps {
   title: string;
@@ -23,7 +23,7 @@ function ProductSection({
       )}
     >
       <div className="w-[50vw] max-w-xl lg:w-[80vw]">
-        <img src={imagePath} className="w-full" />
+        <img src={imagePath} className="w-full rounded-3xl object-cover" />
       </div>
 
       <div className="mt-4 flex max-w-2xl flex-col gap-5 text-center lg:text-start">

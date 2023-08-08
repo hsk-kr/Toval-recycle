@@ -14,5 +14,8 @@
 }
 
 .infinity-swiper .swiper-slide {
+  display: flex;
+  justify-items: center;
+  justify-content: center;
   user-select: none;
 }

@@ -1,15 +1,17 @@
 import React, { useState } from 'react';
 import Drawer from '@mui/material/Drawer';
-import Button from '@mui/material/Button';
 import MenuIcon from '@mui/icons-material/Menu';
-import { sectionsData } from '../../utils/projectData';
 import ScrollLink from '../ScrollLink';
 import { cn } from '../../utils/cn';
 
 interface DrawerMenuProps {
   activeSection: string;
+  sectionsData: {
+    nameToDisplay: string;
+    sectionId: string;
+  }[];
 }
-function DrawerMenu({ activeSection }: DrawerMenuProps) {
+function DrawerMenu({ activeSection, sectionsData }: DrawerMenuProps) {
   const [openDrawer, setOpenDrawer] = useState(false);
 
   const toggleDrawer = (open: boolean) => (event: any) => {

@@ -1,40 +1,39 @@
-import React from 'react';
+import MediaSwiper from '../../components/swiper/MediaSwiper';
 import Modal from '../../components/Modal';
 import ParagraphHeader from '../../components/ParagraphHeader';
-import ImageSwiper from '../../components/swiper/ImageSwiper';
+import React from 'react';
+import { useTranslation } from 'react-i18next';
+
+type MediaData = { src: string; type: 'image' | 'video' };
+
+const mediaData: MediaData[] = [
+  { src: 'what-we-do/video-1.mp4', type: 'video' },
+  { src: 'textimage.jpeg', type: 'image' },
+  { src: 'textimage.jpeg', type: 'image' },
+  { src: 'textimage.jpeg', type: 'image' },
+  { src: 'textimage.jpeg', type: 'image' },
+  { src: 'textimage.jpeg', type: 'image' },
+  { src: 'textimage.jpeg', type: 'image' },
+  { src: 'textimage.jpeg', type: 'image' },
+  { src: 'textimage.jpeg', type: 'image' },
+];
 
 function WhatWeDo() {
+  const { t } = useTranslation();
+  const TITLE = t('whatWeDo.title');
+  const PARAGRAPH = t('whatWeDo.subTitle');
+
   return (
     <div className="flex w-full flex-col gap-6">
       <div className="flex flex-col gap-3">
         <div className="flex justify-center lg:justify-start">
-          <ParagraphHeader>what we are doing</ParagraphHeader>
+          <ParagraphHeader>{TITLE}</ParagraphHeader>
         </div>
-        <h1 className="text-center text-3xl lg:text-start">
-          We hold the varous events, Campaigns and raise funds for the
-          implementation of projects to preserve the environment
-        </h1>
+        <h1 className="text-center text-3xl lg:text-start">{PARAGRAPH}</h1>
       </div>
-      <div className=" h-full">
-        <ImageSwiper
-          data={[
-            'textimage.jpeg',
-            'textimage.jpeg',
-            'textimage.jpeg',
-            'textimage.jpeg',
-            'textimage.jpeg',
-            'textimage.jpeg',
-            'textimage.jpeg',
-            'textimage.jpeg',
-            'textimage.jpeg',
-            'textimage.jpeg',
-            'textimage.jpeg',
-            'textimage.jpeg',
-            'textimage.jpeg',
-          ]}
-        />
+      <div className="h-full">
+        <MediaSwiper data={mediaData} />
       </div>
-      <Modal />
     </div>
   );
 }

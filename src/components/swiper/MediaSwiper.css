@@ -12,8 +12,11 @@
   justify-content: center;
   align-items: center;
   user-select: none;
+  overflow: hidden;
 }
-.image-swiper .swiper-slide img {
+
+.image-swiper .swiper-slide img,
+.image-swiper .swiper-slide video {
   width: auto;
   height: auto;
   max-width: 100%;
@@ -21,6 +24,13 @@
   object-fit: cover;
   object-position: center;
   user-select: none;
+  transition: transform 1s;
+  cursor: pointer;
+  aspect-ratio: 16/9;
+}
+.image-swiper .swiper-slide:hover img,
+.image-swiper .swiper-slide:hover video {
+  transform: scale(1.1);
 }
 .image-swiper .swiper-button-prev,
 .swiper-button-next {

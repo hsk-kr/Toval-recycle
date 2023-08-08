@@ -8,15 +8,17 @@ import Cards from './pages-components/about/AboutCards';
 import StatisticsNumbers from './pages-components/about/StatisticsNumbers';
 import Clients from './pages-components/what-we-do/Clients';
 import Footer from './pages-components/footer/Footer';
-import OurProducts from './pages-components/product/OurProducts';
+import OurProducts from './pages-components/what-we-do/product/OurProducts';
 import { sectionsID } from './utils/projectData';
+import useChangeAppLanguage from './hooks/useChangeAppTitle';
 
 function App() {
   const { home, aboutUs, whatWeAreDoing, getInTouch } = sectionsID;
+  const [direction] = useChangeAppLanguage();
 
   return (
     <Router>
-      <div dir="ltr" className=" overflow-auto">
+      <div dir={direction} className=" overflow-auto">
         <NavBar />
         <section className="flex min-h-[100dvh] flex-col" id={home}>
           <Home />

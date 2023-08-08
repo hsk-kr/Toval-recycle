@@ -1,5 +1,6 @@
 import React from 'react';
-import ParagraphHeader from '../../components/ParagraphHeader';
+import { useTranslation } from 'react-i18next';
+import ParagraphHeader from '../../../components/ParagraphHeader';
 import ProductSection from './productSection';
 
 const ProductsArray = [
@@ -24,16 +25,35 @@ const ProductsArray = [
 ];
 
 function OurProducts() {
+  const { t } = useTranslation();
+  const TITLE = t('whatWeDo.product.title');
+  const SUBTITLE = t('whatWeDo.product.subTitle');
+  const ProductsArray = [
+    {
+      imagePath: '/what-we-do/plastic-granules.jpg',
+      title: t('whatWeDo.product.products.quote_1.title'),
+      paragraph: t('whatWeDo.product.products.quote_1.paragraph'),
+    },
+    {
+      imagePath: '/what-we-do/plastic-granules-for-blowing.png',
+      title: t('whatWeDo.product.products.quote_2.title'),
+      paragraph: t('whatWeDo.product.products.quote_2.paragraph'),
+    },
+    {
+      imagePath: '/what-we-do/plastic-granules-nylon-sheets.jpeg',
+      title: t('whatWeDo.product.products.quote_3.title'),
+      paragraph: t('whatWeDo.product.products.quote_3.paragraph'),
+    },
+  ];
+
   return (
     <div>
       <div className="flex w-full mb-20 flex-col justify-center text-center ">
         <div className="flex w-full justify-center">
-          <ParagraphHeader>Products</ParagraphHeader>
+          <ParagraphHeader>{TITLE}</ParagraphHeader>
         </div>
         <div className="mt-4 flex flex-col gap-5">
-          <h2 className="text-4xl font-semibold">
-            The products that we are making.
-          </h2>
+          <h2 className="text-4xl font-semibold">{SUBTITLE}</h2>
         </div>
       </div>
       <div className="flex flex-col gap-10">
