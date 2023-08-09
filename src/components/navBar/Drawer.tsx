@@ -36,7 +36,7 @@ function DrawerMenu({ activeSection, sectionsData }: DrawerMenuProps) {
                 <h1
                   onClick={toggleDrawer(false)}
                   className={cn(
-                    'flex w-full cursor-pointer justify-center py-2 text-2xl font-semibold hover:text-main',
+                    'flex w-full cursor-pointer justify-center py-2 text-2xl font-semibold hover:text-main capitalize',
                     isLinkSectionActive ? 'text-main' : ''
                   )}
                 >

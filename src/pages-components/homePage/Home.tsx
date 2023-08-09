@@ -37,7 +37,7 @@ function Home() {
 
   return (
     <>
-      <div className="flex flex-1 flex-col items-center justify-evenly px-10 pt-16 text-center lg:flex-row lg:text-start">
+      <div className="flex flex-1 flex-col items-center justify-evenly px-10 pt-20 text-center lg:flex-row lg:text-start">
         <div className="flex max-w-2xl flex-col gap-6 ">
           <h1 className="text-5xl font-semibold leading-[1] sm:text-6xl lg:text-[6vw] 2xl:text-8xl">
             {TITLE}

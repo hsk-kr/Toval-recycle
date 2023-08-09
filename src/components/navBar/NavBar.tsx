@@ -6,6 +6,7 @@ import ScrollLink from '../ScrollLink';
 import useApplyLinkStyle from './hooks/useApplyLinkStyle';
 import useApplyNavBarStyle from './hooks/useApplyNavBarStyle';
 import { useTranslation } from 'react-i18next';
+import LanguageButton from '../languageButton/LanguageButton';
 
 function NavBar() {
   const { t } = useTranslation();
@@ -24,7 +25,7 @@ function NavBar() {
   return (
     <nav
       className={cn(
-        'fixed top-0 h-20 z-20 mx-auto flex w-screen items-center justify-between bg-white px-7 py-3 shadow-sm transition duration-700 xl:px-16',
+        'fixed top-0 h-16 z-20 mx-auto flex w-screen items-center justify-between bg-white px-7 py-3 shadow-sm transition duration-700 xl:px-16',
         navBarStyle
       )}
     >
@@ -37,7 +38,7 @@ function NavBar() {
                 <ScrollLink
                   to={sectionId}
                   className={cn(
-                    'cursor-pointer font-semibold text-black hover:text-main',
+                    'cursor-pointer font-semibold text-black hover:text-main capitalize',
                     isLinkSectionActive ? 'text-main' : ''
                   )}
                 >
@@ -50,7 +51,10 @@ function NavBar() {
       ) : (
         <DrawerMenu activeSection={activeSection} sectionsData={sectionsData} />
       )}
-      <img src="/logo.svg" className=" aspect-auto w-16 lg:w-20" />
+      <div className="flex items-center gap-4">
+        <LanguageButton />
+        <img src="/logo.svg" className=" aspect-auto w-12 lg:w-20" />
+      </div>
     </nav>
   );
 }

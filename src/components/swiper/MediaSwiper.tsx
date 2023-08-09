@@ -57,6 +57,7 @@ export default function ImageSwiper({
         )}
       </Modal>
       <Swiper
+        dir="ltr"
         slidesPerView={1}
         grid={{
           rows: 1,

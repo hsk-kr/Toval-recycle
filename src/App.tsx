@@ -18,7 +18,7 @@ function App() {
 
   return (
     <Router>
-      <div dir={direction} className=" overflow-auto">
+      <div dir={direction} className="overflow-auto">
         <NavBar />
         <section className="flex min-h-[100dvh] flex-col" id={home}>
           <Home />

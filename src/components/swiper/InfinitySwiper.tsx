@@ -29,7 +29,19 @@ export default function InfinitySwiper({
 
   return (
     <SwiperComp
-      slidesPerView={SlidePerView}
+      dir="ltr"
+      slidesPerView={2}
+      breakpoints={{
+        768: {
+          slidesPerView: 3,
+        },
+        1024: {
+          slidesPerView: 4,
+        },
+        1536: {
+          slidesPerView: SlidePerView,
+        },
+      }}
       spaceBetween={10}
       loop={true}
       autoplay={{
