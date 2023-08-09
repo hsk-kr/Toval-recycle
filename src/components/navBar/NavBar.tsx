@@ -25,7 +25,7 @@ function NavBar() {
   return (
     <nav
       className={cn(
-        'fixed top-0 h-16 z-20 mx-auto flex w-screen items-center justify-between bg-white px-7 py-3 shadow-sm transition duration-700 xl:px-16',
+        'fixed top-0 h-16 sm:h-20 z-20 mx-auto flex w-screen items-center justify-between bg-white px-7 py-3 shadow-sm transition duration-700 xl:px-16',
         navBarStyle
       )}
     >
@@ -53,7 +53,7 @@ function NavBar() {
       )}
       <div className="flex items-center gap-4">
         <LanguageButton />
-        <img src="/logo.svg" className=" aspect-auto w-12 lg:w-20" />
+        <img src="/logo.svg" className=" aspect-auto w-12 sm:w-20" />
       </div>
     </nav>
   );
