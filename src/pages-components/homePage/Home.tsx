@@ -4,8 +4,10 @@ import { PiRecycleLight, PiPercent } from 'react-icons/pi';
 import { sectionsID } from '../../utils/projectData';
 import ScrollLink from '../../components/ScrollLink';
 import { Trans, useTranslation } from 'react-i18next';
+import LazyImage from '../../components/LazyImage';
 
 const MAINIMAGE = '/home-main-image.png';
+const LOW_MAINIMAGE = '/home-main-image-low.png';
 
 function Home() {
   const { t } = useTranslation();
@@ -53,10 +55,13 @@ function Home() {
             </ScrollLink>
           </div>
         </div>
-        <img
-          src={MAINIMAGE}
-          className="w-full max-w-xl  lg:w-1/2 lg:max-w-6xl"
-        />
+        <div className="w-30rem lg:w-[72rem]">
+          <LazyImage
+            src={MAINIMAGE}
+            lowSrc={LOW_MAINIMAGE}
+            className="object-contain"
+          />
+        </div>
       </div>
       <div className="flex w-full justify-around bg-secondary p-4 xs:p-5">
         {homeFooter.map(({ title, icons, paragraph }, index) => {

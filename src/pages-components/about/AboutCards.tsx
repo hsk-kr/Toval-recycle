@@ -1,30 +1,40 @@
-import { Card } from '@mui/material';
 import React from 'react';
 import ParagraphHeader from '../../components/ParagraphHeader';
 import AboutCard from './AboutCard';
-import { RiRecycleFill } from 'react-icons/ri';
 import { useTranslation } from 'react-i18next';
 
 function AboutCards() {
   const { t } = useTranslation();
   const AboutCardsData = [
     {
-      icon: <img src="/about-us/about-us-1.svg" />,
+      iconPath: {
+        original: '/about-us/about-us-1.svg',
+        low: '/about-us/about-us-1-low.png',
+      },
       title: t('aboutUs.cards.card_1.title'),
       paragraph: t('aboutUs.cards.card_1.paragraph'),
     },
     {
-      icon: <img src="/about-us/about-us-2.svg" />,
+      iconPath: {
+        original: '/about-us/about-us-2.svg',
+        low: '/about-us/about-us-2-low.png',
+      },
       title: t('aboutUs.cards.card_2.title'),
       paragraph: t('aboutUs.cards.card_2.paragraph'),
     },
     {
-      icon: <img src="/about-us/about-us-3.svg" />,
+      iconPath: {
+        original: '/about-us/about-us-3.svg',
+        low: '/about-us/about-us-3-low.png',
+      },
       title: t('aboutUs.cards.card_3.title'),
       paragraph: t('aboutUs.cards.card_3.paragraph'),
     },
     {
-      icon: <img src="/about-us/about-us-4.svg" />,
+      iconPath: {
+        original: '/about-us/about-us-4.svg',
+        low: '/about-us/about-us-4-low.png',
+      },
       title: t('aboutUs.cards.card_4.title'),
       paragraph: t('aboutUs.cards.card_4.paragraph'),
     },
@@ -43,13 +53,13 @@ function AboutCards() {
         </div>
       </div>
       <div className="grid grid-cols-1 gap-4 sm:grid-cols-2 xl:grid-cols-4">
-        {AboutCardsData.map(({ title, paragraph, icon }, index) => {
+        {AboutCardsData.map(({ title, paragraph, iconPath }, index) => {
           return (
             <AboutCard
               key={index}
               title={title}
               paragraph={paragraph}
-              icon={icon}
+              iconPath={iconPath}
             />
           );
         })}

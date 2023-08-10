@@ -35,6 +35,7 @@ function LanguageButton() {
 
             return (
               <img
+                key={key}
                 src={languageFlags[key as LanguageKeys]}
                 className="w-7 rounded-full cursor-pointer hover:scale-110 transition-all"
                 onClick={() => changeLanguage(key as LanguageKeys)}

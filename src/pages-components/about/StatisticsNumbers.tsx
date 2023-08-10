@@ -11,13 +11,13 @@ function StatisticsNumbers() {
       title: t('aboutUs.statistics.quote_1.title'),
     },
     {
-      icon: <img className="h-full" src="/statistics/number-icons-3.svg" />,
+      icon: <img className="h-full" src="/statistics/number-icons-2.svg" />,
       number: t('aboutUs.statistics.quote_2.number'),
       suffix: t('aboutUs.statistics.quote_2.suffix'),
       title: t('aboutUs.statistics.quote_2.title'),
     },
     {
-      icon: <img className="h-full" src="/statistics/number-icons-2.svg" />,
+      icon: <img className="h-full" src="/statistics/number-icons-3.svg" />,
       number: t('aboutUs.statistics.quote_3.number'),
       title: t('aboutUs.statistics.quote_3.title'),
     },
@@ -37,6 +37,7 @@ function StatisticsNumbers() {
             <div className="relative z-10 flex flex-col gap-2">
               <CountUp
                 suffix={suffix}
+                redraw={false}
                 end={number}
                 duration={5}
                 className="font-bold text-main text-5xl md:text-7xl"

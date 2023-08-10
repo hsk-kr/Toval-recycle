@@ -30,17 +30,26 @@ function OurProducts() {
   const SUBTITLE = t('whatWeDo.product.subTitle');
   const ProductsArray = [
     {
-      imagePath: '/what-we-do/plastic-granules.jpg',
+      imagePath: {
+        original: '/what-we-do/plastic-granules.jpg',
+        low: '/what-we-do/plastic-granules-low.jpg',
+      },
       title: t('whatWeDo.product.products.quote_1.title'),
       paragraph: t('whatWeDo.product.products.quote_1.paragraph'),
     },
     {
-      imagePath: '/what-we-do/plastic-granules-for-blowing.png',
+      imagePath: {
+        original: '/what-we-do/plastic-granules-for-blowing.png',
+        low: '/what-we-do/plastic-granules-for-blowing-low.jpg',
+      },
       title: t('whatWeDo.product.products.quote_2.title'),
       paragraph: t('whatWeDo.product.products.quote_2.paragraph'),
     },
     {
-      imagePath: '/what-we-do/plastic-granules-nylon-sheets.jpeg',
+      imagePath: {
+        original: '/what-we-do/plastic-granules-nylon-sheets.jpeg',
+        low: '/what-we-do/plastic-granules-nylon-sheets-low.jpeg',
+      },
       title: t('whatWeDo.product.products.quote_3.title'),
       paragraph: t('whatWeDo.product.products.quote_3.paragraph'),
     },

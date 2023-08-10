@@ -100,7 +100,11 @@ export default function ImageSwiper({
                   </div>
                 </div>
               ) : (
-                <img src={src} onClick={() => handleModalOpen(src, isVideo)} />
+                <img
+                  src={src}
+                  loading="lazy"
+                  onClick={() => handleModalOpen(src, isVideo)}
+                />
               )}
             </SwiperSlide>
           );

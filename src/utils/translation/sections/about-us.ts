@@ -24,13 +24,13 @@ export const aboutUs_en = {
     },
   },
   statistics: {
-    quote_1: { number: 4000000, title: 'tons of cardboard weve recycled' },
+    quote_1: { number: 1000000, title: 'tons of cardboard weve recycled' },
     quote_2: {
-      number: 85,
+      number: 99,
       title: 'of the Fortune 500 weve served',
       suffix: '%',
     },
-    quote_3: { number: 1800000, title: 'of the Fortune 500 weve served' },
+    quote_3: { number: 1000000, title: 'tons of cardboard weve recycled' },
   },
 };
 export const aboutUs_heb = {
@@ -65,6 +65,6 @@ export const aboutUs_heb = {
       title: 'לקוחות מרוצים',
       suffix: '%',
     },
-    quote_3: { number: 1800000, title: 'כסף שנחסך לחברות' },
+    quote_3: { number: 1000000, title: 'טונות של פלסטיק שמיחזרנו' },
   },
 };

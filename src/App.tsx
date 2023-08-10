@@ -29,9 +29,9 @@ function App() {
             <StatisticsNumbers />
           </section>
           <section id={whatWeAreDoing} className="flex flex-col gap-44">
-            <WhatWeDo />
+            {/* <WhatWeDo /> */}
             <OurProducts />
-            <Clients />
+            {/* <Clients /> */}
           </section>
           <section id={getInTouch}>
             <Contact />

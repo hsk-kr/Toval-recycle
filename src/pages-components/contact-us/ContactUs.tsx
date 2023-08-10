@@ -8,6 +8,7 @@ import { ImPhone } from 'react-icons/im';
 import ParagraphHeader from '../../components/ParagraphHeader';
 import { useFormik } from 'formik';
 import { useTranslation } from 'react-i18next';
+import LazyImage from '../../components/LazyImage';
 
 const SERVICE_ID = '';
 
@@ -136,10 +137,13 @@ function ContactUs() {
           </form>
         </div>
         <div className="flex justify-center items-center lg:items-start lg:flex-col gap-4 md:gap-10">
-          <img
-            src="/contact-us/main-image.svg"
-            className="inline w-1/2 lg:w-full"
-          />
+          <div className="w-64 lg:w-[25rem] xl:w-[29rem]">
+            <LazyImage
+              src="/contact-us/main-image.svg"
+              lowSrc="/contact-us/main-image-low.png"
+              className="aspect-square object-contain"
+            />
+          </div>
           <div className="flex flex-col gap-4">
             {contactInfo.map(({ icon, title }, index) => (
               <div className="flex gap-2 md:gap-5 items-center" key={index}>

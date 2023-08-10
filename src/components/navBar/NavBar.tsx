@@ -7,11 +7,12 @@ import useApplyLinkStyle from './hooks/useApplyLinkStyle';
 import useApplyNavBarStyle from './hooks/useApplyNavBarStyle';
 import { useTranslation } from 'react-i18next';
 import LanguageButton from '../languageButton/LanguageButton';
+import LazyImage from '../LazyImage';
 
 function NavBar() {
   const { t } = useTranslation();
   const [navBarStyle] = useApplyNavBarStyle();
-  const [activeSection] = useApplyLinkStyle({ offset: siteOffset });
+  const [activeSection] = useApplyLinkStyle({ offset: siteOffset() });
   const isMobile = useMediaQuery({ maxWidth: 640 });
   const sectionsData = [
     { nameToDisplay: t('navBar.home'), sectionId: sectionsID.home },
@@ -53,7 +54,13 @@ function NavBar() {
       )}
       <div className="flex items-center gap-4">
         <LanguageButton />
-        <img src="/logo.svg" className=" aspect-auto w-12 sm:w-20" />
+        <div className="w-12 sm:w-20">
+          <LazyImage
+            src="/logo.svg"
+            lowSrc="/logo-low.png"
+            className="aspect-auto "
+          />
+        </div>
       </div>
     </nav>
   );

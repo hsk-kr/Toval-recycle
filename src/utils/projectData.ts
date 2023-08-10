@@ -5,7 +5,9 @@ export const sectionsID = {
   getInTouch: 'contact',
 };
 
-export const siteOffset = window.innerWidth > 768 ? 120 : 104;
+export const siteOffset = () => {
+  return window.innerWidth > 768 ? 120 : 100;
+};
 
 export const sectionsData = [
   { nameToDisplay: 'Home', sectionId: sectionsID.home },
