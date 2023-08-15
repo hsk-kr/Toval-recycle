@@ -28,7 +28,10 @@ function App() {
             <Cards />
             <StatisticsNumbers />
           </section>
-          <section id={whatWeAreDoing} className="flex flex-col gap-44">
+          <section
+            id={whatWeAreDoing}
+            className="flex flex-col gap-20 lg:gap-44"
+          >
             <WhatWeDo />
             <OurProducts />
             <Clients />

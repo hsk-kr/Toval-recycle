@@ -106,6 +106,7 @@ export default function ImageSwiper({
                   onClick={() => handleModalOpen(src, isVideo)}
                 />
               )}
+              <div className="swiper-lazy-preloader"></div>
             </SwiperSlide>
           );
         })}

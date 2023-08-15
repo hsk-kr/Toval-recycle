@@ -1,6 +1,10 @@
 import React from 'react';
 import Button from '../../components/Button';
-import { PiRecycleLight, PiPercent } from 'react-icons/pi';
+import {
+  PiRecycleLight,
+  PiTreeEvergreenLight,
+  PiHandshake,
+} from 'react-icons/pi';
 import { sectionsID } from '../../utils/projectData';
 import ScrollLink from '../../components/ScrollLink';
 import { Trans, useTranslation } from 'react-i18next';
@@ -13,7 +17,7 @@ function Home() {
   const { t } = useTranslation();
   const homeFooter = [
     {
-      icons: <PiPercent />,
+      icons: <PiTreeEvergreenLight />,
       title: t('home.footer.quote_1.title'),
       paragraph: t('home.footer.quote_1.paragraph'),
     },
@@ -23,7 +27,7 @@ function Home() {
       paragraph: t('home.footer.quote_2.paragraph'),
     },
     {
-      icons: <PiRecycleLight />,
+      icons: <PiHandshake />,
       title: t('home.footer.quote_3.title'),
       paragraph: t('home.footer.quote_3.paragraph'),
     },

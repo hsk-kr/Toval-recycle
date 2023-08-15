@@ -29,7 +29,9 @@ function WhatWeDo() {
         <div className="flex justify-center lg:justify-start">
           <ParagraphHeader>{TITLE}</ParagraphHeader>
         </div>
-        <h1 className="text-center text-3xl lg:text-start">{PARAGRAPH}</h1>
+        <h1 className="text-center text-lg md:text-3xl lg:text-start">
+          {PARAGRAPH}
+        </h1>
       </div>
       <div className="h-full">
         <MediaSwiper data={mediaData} />

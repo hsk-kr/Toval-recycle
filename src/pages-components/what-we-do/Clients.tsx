@@ -4,20 +4,76 @@ import ParagraphHeader from '../../components/ParagraphHeader';
 import InfinitySwiper from '../../components/swiper/InfinitySwiper';
 
 const clientsLogoData = [
-  <img src="./customers/agan.png" className="h-full" />,
-  <img src="./customers/ale.png" className="h-full" />,
-  <img src="./customers/avgol.png" className="h-full" />,
-  <img src="./customers/clalit.png" className="h-full" />,
-  <img src="./customers/DF_omer.png" className="h-full" />,
-  <img src="./customers/dolav.png" className="h-full" />,
-  <img src="./customers/engel.png" className="h-full" />,
-  <img src="./customers/hen.png" className="h-full" />,
-  <img src="./customers/intel.png" className="h-full" />,
-  <img src="./customers/kafrit.png" className="h-full" />,
-  <img src="./customers/log.png" className="h-full" />,
-  <img src="./customers/teva.png" className="h-full" />,
-  <img src="./customers/yafora.png" className="h-full" />,
-  <img src="./customers/yotvata.png" className="h-full" />,
+  <img
+    src="./customers/agan.png"
+    loading="lazy"
+    className="aspect-video object-contain"
+  />,
+  <img
+    src="./customers/ale.png"
+    loading="lazy"
+    className="aspect-video object-contain"
+  />,
+  <img
+    src="./customers/avgol.png"
+    loading="lazy"
+    className="aspect-video object-contain"
+  />,
+  <img
+    src="./customers/clalit.png"
+    loading="lazy"
+    className="aspect-video object-contain"
+  />,
+  <img
+    src="./customers/DF_omer.png"
+    loading="lazy"
+    className="aspect-video object-contain"
+  />,
+  <img
+    src="./customers/dolav.png"
+    loading="lazy"
+    className="aspect-video object-contain"
+  />,
+  <img
+    src="./customers/engel.png"
+    loading="lazy"
+    className="aspect-video object-contain"
+  />,
+  <img
+    src="./customers/hen.png"
+    loading="lazy"
+    className="aspect-video object-contain"
+  />,
+  <img
+    src="./customers/intel.png"
+    loading="lazy"
+    className="aspect-video object-contain"
+  />,
+  <img
+    src="./customers/kafrit.png"
+    loading="lazy"
+    className="aspect-video object-contain"
+  />,
+  <img
+    src="./customers/log.png"
+    loading="lazy"
+    className="aspect-video object-contain"
+  />,
+  <img
+    src="./customers/teva.png"
+    loading="lazy"
+    className="aspect-video object-contain"
+  />,
+  <img
+    src="./customers/yafora.png"
+    loading="lazy"
+    className="aspect-video object-contain"
+  />,
+  <img
+    src="./customers/yotvata.png"
+    loading="lazy"
+    className="aspect-video object-contain"
+  />,
 ];
 
 function Clients() {
