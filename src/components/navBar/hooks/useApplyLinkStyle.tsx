@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react';
+import { useEffect, useState } from 'react';
 import { sectionsID } from '../../../utils/projectData';
 
 interface useApplyLinkStyleProps {
@@ -23,7 +23,6 @@ function useApplyLinkStyle({ offset }: useApplyLinkStyleProps) {
 
       if (middleViewport >= sectionTop && middleViewport < sectionBottom) {
         setActiveSection(section);
-        break;
       }
     }
   };

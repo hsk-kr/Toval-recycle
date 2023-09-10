@@ -38,7 +38,7 @@ function StatisticsNumbers() {
               <CountUp
                 suffix={suffix}
                 redraw={false}
-                end={number}
+                end={Number(number)}
                 duration={5}
                 className="font-bold text-main text-5xl md:text-7xl"
                 enableScrollSpy={true}

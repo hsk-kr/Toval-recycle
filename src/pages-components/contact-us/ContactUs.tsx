@@ -1,4 +1,4 @@
-import React, { useRef, useState } from 'react';
+import { useRef } from 'react';
 import emailjs from '@emailjs/browser';
 import Button from '../../components/Button';
 
@@ -30,10 +30,14 @@ function ContactUs() {
     },
   ];
 
-  const form: any = useRef();
+  const form = useRef<HTMLFormElement>(null);
 
-  const submitFunction = async () => {
+  const submitFunction = () => {
     try {
+      if (!form.current) {
+        throw new Error('form.current is not defined.');
+      }
+
       emailjs.sendForm(
         SERVICE_ID,
         'template_b777vi7',
@@ -49,7 +53,6 @@ function ContactUs() {
     handleChange,
     handleBlur,
     values,
-    errors,
     resetForm,
     isSubmitting,
     handleSubmit,
@@ -60,10 +63,7 @@ function ContactUs() {
       phone: '',
       message: '',
     },
-
-    onSubmit: () => {
-      submitFunction();
-    },
+    onSubmit: submitFunction,
   });
   return (
     <div>

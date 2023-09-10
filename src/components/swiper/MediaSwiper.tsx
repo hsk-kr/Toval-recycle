@@ -5,7 +5,7 @@ import 'swiper/css/navigation';
 import './MediaSwiper.css';
 
 import { Grid, Navigation, Pagination, SwiperOptions } from 'swiper';
-import React, { useState } from 'react';
+import { useState } from 'react';
 import { Swiper, SwiperSlide } from 'swiper/react';
 
 import { FaRegCirclePlay } from 'react-icons/fa6';

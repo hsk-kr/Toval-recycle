@@ -1,7 +1,5 @@
 import MediaSwiper from '../../components/swiper/MediaSwiper';
-import Modal from '../../components/Modal';
 import ParagraphHeader from '../../components/ParagraphHeader';
-import React from 'react';
 import { useTranslation } from 'react-i18next';
 
 type MediaData = { src: string; type: 'image' | 'video' };
